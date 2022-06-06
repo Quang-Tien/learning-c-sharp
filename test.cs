@@ -1,9 +1,11 @@
 using System;
 
-namespace HelloWorld {
+namespace Variable {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine(313 + 122);
+            int a = 254;
+            int b = 343;
+            Console.WriteLine("a + b = " + (a + b));
         }
     }
 }
