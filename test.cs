@@ -6,14 +6,14 @@ namespace Loop
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int sum = 0;
-            for (int i = 0; i <= n; i++)
+            for (int i = 0; i < 5; i++)
             {
-                if (i % 2 == 1)
-                    sum += i;
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write(i * 5 + j + " ");
+                }
+                Console.WriteLine();
             }
-            Console.Write(sum);
         }
     }
 }
