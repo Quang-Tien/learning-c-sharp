@@ -1,26 +1,19 @@
 using System;
 
-namespace Statement
+namespace Loop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-            if (a <= b && b <= c)
+            int n = int.Parse(Console.ReadLine());
+            int sum = 0;
+            for (int i = 0; i <= n; i++)
             {
-                Console.WriteLine("increasing");
+                if (i % 2 == 1)
+                    sum += i;
             }
-            else if (a >= b && b >= c)
-            {
-                Console.WriteLine("decreasing");
-            }
-            else
-            {
-                Console.WriteLine("neither increasing nor decreasing order");
-            }
+            Console.Write(sum);
         }
     }
 }
