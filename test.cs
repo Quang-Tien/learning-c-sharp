@@ -6,14 +6,18 @@ namespace Loop
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++)
+            int n = int.Parse(Console.ReadLine());
+            int i = 1;
+            int ans = 0;
+            while (i <= n)
             {
-                for (int j = 0; j < 5; j++)
+                if (n % i == 0)
                 {
-                    Console.Write(i * 5 + j + " ");
+                    ans++;
                 }
-                Console.WriteLine();
+                i++;
             }
+            Console.Write(ans);
         }
     }
 }
