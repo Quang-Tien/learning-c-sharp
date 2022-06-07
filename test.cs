@@ -1,20 +1,34 @@
 using System;
 
-namespace Loop
+namespace Array
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			int i = 1;
-			do
+			int n = int.Parse(Console.ReadLine());
+			int m = int.Parse(Console.ReadLine());
+			int[,] arr = new int[n, m];
+			for (int i = 0; i < n; i++)
 			{
-				if (i % 10 == 0)
+				for (int j = 0; j < m; j++)
 				{
-					Console.Write(i + " ");
+					arr[i, j] = int.Parse(Console.ReadLine());
 				}
-				i++;
-			} while (i <= 1000);
+			}
+
+			int answer = 0;
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < m; j++)
+				{
+					if (arr[i, j] % 5 == 0)
+					{
+						answer += arr[i, j];
+					}
+				}
+			}
+			Console.WriteLine(answer);
 		}
 	}
 }
