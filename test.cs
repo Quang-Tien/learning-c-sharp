@@ -1,16 +1,24 @@
 using System;
 
-namespace String
+namespace Method
 {
     class Program
     {
+        public static int SumOfArray(int[] arr, int n)
+        {
+            if (n == 1) return arr[0];
+            return arr[n - 1] + SumOfArray(arr, n - 1);
+        }
+
         static void Main(string[] args)
         {
-            string s1 = Console.ReadLine();
-            string s2 = Console.ReadLine();
-            s1 = s1.ToLower();
-            s2 = s2.ToLower();
-            Console.WriteLine(s1.IndexOf(s2));
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            Console.Write(SumOfArray(arr, n));
         }
     }
 }
