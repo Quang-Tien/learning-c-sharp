@@ -21,3 +21,19 @@ CHECK ( joined_date > birth_date );
 
 ALTERTABLE employees
 DROP CONSTRAINT CHK_JoinedDate;
+
+DELETE FROM 
+movies
+WHERE
+film_title NOT IN ('ALADDIN CALENDAR', 'AFRICAN EGG');
+
+SELECT
+id, name, score
+FROM
+student
+ORDER BY
+score DESC;
+
+SELECT DISTINCT city
+FROM address;
+
