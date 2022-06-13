@@ -37,3 +37,22 @@ score DESC;
 SELECT DISTINCT city
 FROM address;
 
+
+SELECT
+id, name, surname
+FROM
+suspect
+WHERE
+height <= 170
+OR
+name !~~* 'b%'
+OR
+surname !~~ 'Gre_n';
+
+SELECT
+name, role
+FROM
+employees
+WHERE
+building is null;
+
