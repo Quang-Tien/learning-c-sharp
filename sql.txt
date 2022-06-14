@@ -56,3 +56,29 @@ employees
 WHERE
 building is null;
 
+
+SELECT
+(c1.first_name || ' ' || c1.last_name) AS first_customer,
+(c2.first_name || ' ' || c2.last_name) AS second_customer,
+c1.city,
+c1.country
+FROM
+customer c1
+INNER JOIN customer c2 ON (c1.city = c2.city AND c1.country = c2.country)
+WHERE c1.first_name <> c2.first_name
+ORDER by
+c1.country,
+c1.city,
+c1.first_name,
+c1.last_name;
+
+
+SELECT 
+y1.country_code, 
+y1.size AS size2010,
+y2.size AS size2015
+--From populations JOIN to itself, match on country code and year
+FROM 
+populations y1
+INNER JOIN populations y2 ON y1.country_code = y2.country_code AND y1.year = '2010' AND y2.year = '2015';
+
