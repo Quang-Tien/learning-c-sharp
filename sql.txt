@@ -82,3 +82,18 @@ FROM
 populations y1
 INNER JOIN populations y2 ON y1.country_code = y2.country_code AND y1.year = '2010' AND y2.year = '2015';
 
+
+SELECT
+director
+FROM
+moviesInfo
+WHERE
+year >= 1950
+GROUP BY
+director
+HAVING
+sum(oscars) > 2
+ORDER BY
+director ASC;
+
+
